@@ -10,23 +10,24 @@ import 'package:healthadmin/providers/appointment_provider.dart';
 import 'package:healthadmin/providers/review_provider.dart';
 import 'package:healthadmin/router/app_router.dart';
 import 'package:healthadmin/services/firebase_service.dart';
+import 'package:healthadmin/screens/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Firebase and Firebase services here
   try {
+    // Initialize Firebase with the updated options
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
-
-    // Initialize Firebase services immediately after Firebase.initializeApp()
+    
+    // Initialize Firebase services
     await FirebaseService.initialize();
-
-    print('Firebase and services initialized successfully');
+    
+    print('Firebase initialized successfully');
   } catch (e) {
-    print('Firebase initialization error: $e');
-
+    print('Error initializing Firebase: $e');
+    
     // For desktop platforms, continue anyway
     if (defaultTargetPlatform == TargetPlatform.linux ||
         defaultTargetPlatform == TargetPlatform.macOS ||
@@ -43,41 +44,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Only create providers after Firebase is initialized
-    return FutureBuilder(
-      future: _waitForFirebase(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return MaterialApp(
-            theme: AppTheme.lightTheme,
-            home: const Scaffold(
-              body: Center(
-                child: CircularProgressIndicator(),
-              ),
-            ),
-          );
-        }
-
-        return MultiProvider(
-          providers: [
-            ChangeNotifierProvider(create: (_) => AuthProvider()),
-            ChangeNotifierProvider(create: (_) => DoctorProvider()),
-            ChangeNotifierProvider(create: (_) => AppointmentProvider()),
-            ChangeNotifierProvider(create: (_) => ReviewProvider()),
-          ],
-          child: MaterialApp.router(
-            title: 'Doctor Finder',
-            theme: AppTheme.lightTheme,
-            routerConfig: appRouter,
-            debugShowCheckedModeBanner: false,
-          ),
-        );
-      },
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AuthProvider()),
+        ChangeNotifierProvider(create: (_) => DoctorProvider()),
+        ChangeNotifierProvider(create: (_) => AppointmentProvider()),
+        ChangeNotifierProvider(create: (_) => ReviewProvider()),
+      ],
+      child: MaterialApp.router(
+        title: 'HealthAdmin',
+        theme: AppTheme.lightTheme,
+        routerConfig: appRouter,
+        debugShowCheckedModeBanner: false,
+      ),
     );
-  }
-
-  Future<void> _waitForFirebase() async {
-    // Wait a bit for Firebase to be ready
-    await Future.delayed(const Duration(milliseconds: 100));
   }
 }

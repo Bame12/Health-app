@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:489321981801:android:7348d7050e4e3bf0213ff8",
+        "mobilesdk_app_id": "1:489321981801:android:7d811ab615975989213ff8",
         "android_client_info": {
-          "package_name": "com.example.doctor_finder"
+          "package_name": "com.bamenoko.doctor_finder"
         }
       },
       "oauth_client": [],
@@ -26,9 +26,28 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:489321981801:android:6641e6464c5626be213ff8",
+        "mobilesdk_app_id": "1:489321981801:android:cc05f37e80b28550213ff8",
         "android_client_info": {
-          "package_name": "com.yourcompany.doctor_finder"
+          "package_name": "com.example.docdetec"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB65GTDUOZTSYN6BylZhv5wTu_Ji6GLOOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489321981801:android:6481ae7197e4b968213ff8",
+        "android_client_info": {
+          "package_name": "com.example.healthadmin"
         }
       },
       "oauth_client": [],

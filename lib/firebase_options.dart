@@ -42,17 +42,17 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyDjn6D2MIelGDwnleVX3kXausuz5slswKY',
-    appId: '1:489321981801:web:42934440d9f31c2b213ff8',
+    appId: '1:489321981801:web:3eb62979d13055bd213ff8',
     messagingSenderId: '489321981801',
     projectId: 'doctor-finder-b94c2',
     authDomain: 'doctor-finder-b94c2.firebaseapp.com',
     storageBucket: 'doctor-finder-b94c2.firebasestorage.app',
-    measurementId: 'G-X8K4NHY9YR',
+    measurementId: 'G-YVVD3XHCWK',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyB65GTDUOZTSYN6BylZhv5wTu_Ji6GLOOg',
-    appId: '1:489321981801:android:7348d7050e4e3bf0213ff8',
+    appId: '1:489321981801:android:6481ae7197e4b968213ff8',
     messagingSenderId: '489321981801',
     projectId: 'doctor-finder-b94c2',
     storageBucket: 'doctor-finder-b94c2.firebasestorage.app',
@@ -60,11 +60,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAlasSvs0uytp6fNsSosgG41ppg0f8QKyQ',
-    appId: '1:489321981801:ios:1761ce9e4ebef981213ff8',
+    appId: '1:489321981801:ios:ac2204ea470aef9f213ff8',
     messagingSenderId: '489321981801',
     projectId: 'doctor-finder-b94c2',
     storageBucket: 'doctor-finder-b94c2.firebasestorage.app',
-    iosBundleId: 'com.example.doctorFinder',
+    iosBundleId: 'com.example.healthadmin',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
