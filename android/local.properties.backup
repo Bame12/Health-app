@@ -1,0 +1,6 @@
+sdk.dir=/home/bamejuniiornoko/Android/Sdk
+ndk.dir=/path/to/your/android/sdk/ndk/VERSION
+flutter.sdk=/opt/flutter
+flutter.buildMode=debug
+flutter.versionName=1.0.0
+flutter.versionCode=1

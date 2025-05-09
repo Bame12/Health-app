@@ -4,8 +4,3 @@ android.enableJetifier=true
 
 # Explicitly set NDK version
 android.ndkVersion=21.4.7075529
-# Try to disable NDK requirements
-android.defaults.buildfeatures.buildconfig=true
-android.nonTransitiveRClass=false
-android.nonFinalResIds=false
-android.ndkVersion=21.4.7075529

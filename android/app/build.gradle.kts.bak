@@ -10,7 +10,7 @@ plugins {
 
 android {
 
-    ndkVersion21flutt.4.7075529"
+    ndkVersion = "21.4.7075529"
     externalNativeBuild {
         cmake {
             path = File("CMakeLists.txt")

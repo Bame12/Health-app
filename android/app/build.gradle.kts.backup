@@ -10,7 +10,7 @@ plugins {
 
 android {
 
-    ndkVersion21flutt.4.7075529"
+    ndkVersion = null
     externalNativeBuild {
         cmake {
             path = File("CMakeLists.txt")
@@ -18,7 +18,6 @@ android {
     }
 
     namespace = "com.example.healthadmin"
-    ndkVersion = "21.4.7075529"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
